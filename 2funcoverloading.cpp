@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-float area(float radius) {
+float area(double radius) {
     return 3.1415 * radius * radius;
 }
 
-float area(int side) {
+float area(float side) {
     return side * side;
 }
 
@@ -20,15 +20,16 @@ float area(float base, float height, float dummy) {
 void displayMenu() {
     cout << "Enter your choice:\n";
     cout << "1. Area of Circle\n";
-    cout << "2. Area of Square\n";
+    cout << "2. Area of Square \n";
     cout << "3. Area of Triangle\n";
     cout << "4. Area of Rectangle\n";
     cout << "0. Exit\n";
 }
 
 int main() {
-    int choice, side;
-    float radius, base, height;
+    int choice;
+    double radius;
+    float side, base, height;
 
     do {
     displayMenu();
