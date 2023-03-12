@@ -30,7 +30,7 @@ int main() {
     int choice;
     double radius;
     float side, base, height;
-// Do while loop
+// Do while loop added for simplicity
     do {
     displayMenu();
     cin >> choice;
