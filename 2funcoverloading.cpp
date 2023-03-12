@@ -5,7 +5,7 @@ float area(float radius) {
     return 3.1415 * radius * radius;
 }
 
-float area(float side) {
+float area(int side) {
     return side * side;
 }
 
@@ -18,8 +18,8 @@ float area(float base, float height, float dummy) {
 }
 
 int main() {
-    int choice;
-    float radius, side, base, height;
+    int choice, side;
+    float radius, base, height;
 
     cout << "Enter your choice:\n";
     cout << "1. Area of Circle\n";
