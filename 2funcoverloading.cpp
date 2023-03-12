@@ -30,7 +30,6 @@ int main() {
     int choice;
     double radius;
     float side, base, height;
-// Do while loop added for simplicity
     do {
     displayMenu();
     cin >> choice;
@@ -65,7 +64,9 @@ int main() {
                 break;
             default:
                 cout << "Invalid choice!" << endl;
-    }
+        }
+    
     }while(choice != 0);
+
     return 0;
 }
