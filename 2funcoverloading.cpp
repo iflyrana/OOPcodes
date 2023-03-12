@@ -17,15 +17,18 @@ float area(float base, float height, float dummy) {
     return base * height;
 }
 
-int main() {
-    int choice, side;
-    float radius, base, height;
-
-    cout << "Enter your choice:\n";
+void displayMenu() {
+        cout << "Enter your choice:\n";
     cout << "1. Area of Circle\n";
     cout << "2. Area of Square\n";
     cout << "3. Area of Triangle\n";
     cout << "4. Area of Rectangle\n";
+}
+
+int main() {
+    int choice, side;
+    float radius, base, height;
+    displayMenu();
     cin >> choice;
 
     switch(choice) {
