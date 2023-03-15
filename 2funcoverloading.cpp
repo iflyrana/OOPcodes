@@ -18,11 +18,11 @@ float area(float base, float height, float dummy) {
 }
 
 void displayMenu() {
-    cout << "Enter your choice:\n";
-    cout << "1. Area of Circle\n";
-    cout << "2. Area of Square \n";
-    cout << "3. Area of Triangle\n";
-    cout << "4. Area of Rectangle\n";
+    cout << "Enter your choice:" << endl;
+    cout << "1. Area of Circle" << endl;
+    cout << "2. Area of Square " << endl;
+    cout << "3. Area of Triangle" << endl;
+    cout << "4. Area of Rectangle" << endl;
     cout << "0. Exit\n";
 }
 
