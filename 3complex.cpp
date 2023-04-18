@@ -34,7 +34,12 @@ public:
     }
 
     void display() {
-        cout << real << " + " << imag << "i" << endl;
+        if(imag < 0) {
+            cout << real << imag << "i" << endl;  
+        }
+        else {
+            cout << real << " + " << imag << "i" << endl;
+        }
     }
 };
 
@@ -43,30 +48,44 @@ int main() {
 
     cout<<"Complex number 1:\nEnter Real Part:";
     cin>>a;
-    cout<<"\nEnter Complex Part: ";
+    cout<<"Enter Complex Part: ";
     cin>>b;
     Complex c1(a, b);
-    cout<<"Complex number 2:\nEnter Real Part:";
+    cout<<"\nComplex number 2:\nEnter Real Part:";
     cin>>a;
-    cout<<"\nEnter Complex Part: ";
+    cout<<"Enter Complex Part: ";
     cin>>b;
     Complex c2(a, b);
     
-
+    cout<<endl;
+    cout<<"Sum"<<endl;
     Complex sum = c1 + c2;
     sum.display();
+    cout<<endl;
 
+    cout<<"Diffrence"<<endl;
     Complex diff = c1 - c2;
     diff.display();
+    cout<<endl;
 
+    cout<<"Product"<<endl;
     Complex prod = c1 * c2;
     prod.display();
+    cout<<endl;
 
+    cout<<"Division"<<endl;
     Complex quot = c1 / c2;
     quot.display();
+    cout<<endl;
 
-    Complex conj = c1.conjugate();
-    conj.display();
+    cout<<"Complex Conjugate"<<endl;
+    Complex conj1 = c1.conjugate();
+    cout<<"Complex conjugate of c1: ";
+    conj1.display();
+    Complex conj2 = c2.conjugate();
+    cout<<"Complex conjugate of c2: ";
+    conj2.display();
+    cout << endl;
 
     return 0;
 }
