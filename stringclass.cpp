@@ -99,6 +99,7 @@ int main() {
     cout << endl;
 
     mystring s5;
+    cout << "To concatenate with the previous string, Please ";
     s5.Accepts(); // User input
 
     mystring s6 = s4.Concat(s5);
@@ -107,6 +108,7 @@ int main() {
     cout << endl;
     
     mystring s7;
+    cout << "To find out Length Please ";
     s7.Accepts(); // User input
 
     int length = s7.Length();
