@@ -51,15 +51,23 @@ public:
     }
 
     // Concatenation function
-    mystring Concat(const mystring& s) {
-        int newLen = len + s.len;
-        char* newStr = new char[newLen + 1];
-        strcpy(newStr, str);
-        strcat(newStr, s.str);
-        mystring result(newStr);
-        delete[] newStr;
-        return result;
+mystring Concat(const mystring& s) {
+    int newLen = len + s.len;
+    char* newStr = new char[newLen + 1];
+    int i = 0;
+    for (i = 0; i < len; i++) {
+        newStr[i] = str[i];
     }
+    for (int j = 0; j < s.len; j++) {
+        newStr[i] = s.str[j];
+        i++;
+    }
+    newStr[newLen] = '\0';
+    mystring result(newStr);
+    delete[] newStr;
+    return result;
+}
+
 
     // Length function
     int Length() {
