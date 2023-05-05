@@ -62,11 +62,11 @@ public:
             newStr[i] = s.str[j];
             i++;
         }
-    newStr[newLen] = '\0';
-    mystring result(newStr);
-    delete[] newStr;
-    return result;
-}
+        newStr[newLen] = '\0';
+        mystring result(newStr);
+        delete[] newStr;
+        return result;
+    }
 
 
     // Length function
