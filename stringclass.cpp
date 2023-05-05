@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+
 using namespace std;
 
 class mystring {
@@ -17,7 +18,7 @@ public:
 
     // Parameterized constructor
     mystring(const char* s) {
-        len = strlen(s);
+        len = strLength(s);
         str = new char[len + 1];
         strcpy(str, s);
     }
@@ -39,7 +40,7 @@ public:
         char buffer[100];
         cout << "Enter a string: ";
         cin.getline(buffer, 100);
-        len = strlen(buffer);
+        len = strLength(buffer);
         str = new char[len + 1];
         strcpy(str, buffer);
     }
@@ -63,6 +64,15 @@ public:
     // Length function
     int Length() {
         return len;
+    }
+
+    // Function to find length of a string
+    int strLength(const char* s) {
+        int count = 0;
+        while (s[count] != '\0') {
+            count++;
+        }
+        return count;
     }
 };
 
